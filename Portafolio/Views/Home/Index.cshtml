@@ -1,18 +1,11 @@
-﻿@{
+﻿@model HomeIndexViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Soy Yan Carlos Morera</h1>
-    <h2>Soy un desarrollador full stack especializado en tecnologías .NET y JS</h2>
-    <img src="~/img/ai-faces-01.jpg" alt="ai generated image" class="personal-image" />
-</div>
+<partial name="_Presentacion" />
 
-<div class="row justify-content-center text-center">
-    <div class="col col-md-7">
-        <h1>Bienvenido a mi portafolio</h1>
-        <p>
+<partial name="_Habilidades" />
 
-        </p>
-    </div>
-</div>
+<partial name="_SeccionProyectos" />
