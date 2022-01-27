@@ -26,25 +26,30 @@ namespace Portafolio.Controllers
             return View(modelo);
         }
 
-        public IActionResult Proyectos()
+        public IActionResult Work()
         {
             var proyectos = repositorioProyectos.ObtenerProyectos();
             return View(proyectos);
         }
 
-        public IActionResult Contacto()
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult About()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Contacto(ContactoViewModel contactoViewModel)
+        public async Task<IActionResult> Contact(ContactoViewModel contactoViewModel)
         {
             await servicioEmail.Enviar(contactoViewModel);
             return RedirectToAction("Gracias");
         }
 
-        public IActionResult Gracias()
+        public IActionResult Thanks()
         {
             return View();
         }

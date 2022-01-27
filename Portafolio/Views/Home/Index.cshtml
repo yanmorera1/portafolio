@@ -4,8 +4,10 @@
     ViewData["Title"] = "Home Page";
 }
 
-<partial name="_Presentacion" />
+<div class="container">
+    <partial name="_Welcome" />
 
-<partial name="_Habilidades" />
+    <partial name="_Skills" />
 
-<partial name="_SeccionProyectos" model="Model.Proyectos" />
+    <partial name="_WorkSection" model="Model.Proyectos" />
+</div>
