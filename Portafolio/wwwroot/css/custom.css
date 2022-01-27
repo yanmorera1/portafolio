@@ -1,7 +1,6 @@
 ﻿.personal-image {
     width: 15rem;
     border-radius: 50%;
-    /*border: 2px solid white;*/
     margin: 2rem;
 }
 
@@ -17,10 +16,6 @@
         font-size: 1.25rem;
     }
 
-/*#imagen-dotnet {
-    width: 500px;
-}*/
-
 .cabecera {
     font-weight: bold;
 }
@@ -34,8 +29,43 @@
     font-size: 50px;
 }
 
-.gradiente {
-    background: #000046; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.line-1 {
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 4rem;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 4s steps(28) 1s 1 normal both, blinkTextCursor 500ms steps(28) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 15.5em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255,255,255,.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.nav-link {
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover{
+    border-bottom: 2px solid #fff;
 }
