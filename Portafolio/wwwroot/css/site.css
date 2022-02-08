@@ -52,6 +52,8 @@ body {
     background: var(--gradient-color-1);
     background: -webkit-linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
     background: linear-gradient(to top, var(--gradient-color-1), var(--gradient-color-2));
+    /*background-repeat: no-repeat;*/
+    background-size: 1vh !important;
 }
 
 header > nav, body, .card {
