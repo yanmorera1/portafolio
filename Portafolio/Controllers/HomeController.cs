@@ -2,6 +2,7 @@
 using Portafolio.Models;
 using Portafolio.Servicios;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace Portafolio.Controllers
 {
@@ -19,8 +20,9 @@ namespace Portafolio.Controllers
         public IActionResult Index()
         {
             var proyectos = repositorioProyectos.ObtenerProyectos().Take(3).ToList();
-            
-            var modelo = new HomeIndexViewModel() { 
+
+            var modelo = new HomeIndexViewModel()
+            {
                 Proyectos = proyectos,
             };
             return View(modelo);
@@ -46,7 +48,7 @@ namespace Portafolio.Controllers
         public async Task<IActionResult> Contact(ContactoViewModel contactoViewModel)
         {
             await servicioEmail.Enviar(contactoViewModel);
-            return RedirectToAction("Gracias");
+            return RedirectToAction("Thanks");
         }
 
         public IActionResult Thanks()

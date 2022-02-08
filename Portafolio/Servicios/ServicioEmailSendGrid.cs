@@ -19,9 +19,9 @@ namespace Portafolio.Servicios
 
         public async Task Enviar(ContactoViewModel contacto)
         {
-            string apiKey = configuration.GetValue<string>("SENDGRIPD_API_KEY");
-            string email = configuration.GetValue<string>("SENDGRIPD_FROM");
-            string nombre = configuration.GetValue<string>("SENDGRIPD_NOMBRE");
+            string apiKey = Environment.GetEnvironmentVariable("SENDGRIPD_API_KEY");
+            string email = Environment.GetEnvironmentVariable("SENDGRIPD_FROM");
+            string nombre = Environment.GetEnvironmentVariable("SENDGRIPD_NOMBRE");
 
             var cliente = new SendGridClient(apiKey);
             var from = new EmailAddress(email, nombre);
